@@ -1,4 +1,6 @@
-﻿#Uses file explorer window for picking the VCF file
+Add-Type -AssemblyName System.Windows.Forms
+
+#Uses file explorer window for picking the VCF file
 $FileBrowser = New-Object System.Windows.Forms.OpenFileDialog
 $FileBrowser.Title = "Choose your .vcf"
 $result = $FileBrowser.ShowDialog((New-Object System.Windows.Forms.Form -Property @{TopMost = $true }))
